@@ -9,7 +9,7 @@ namespace ExpertsBlog.Api.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class ControllerBase<T> : ControllerBase
+    public abstract class ControllerBase<T> : ControllerBase
         where T : EntityBase, new()
     {
         private readonly Repository<T> Repository;
@@ -27,7 +27,7 @@ namespace ExpertsBlog.Api.Controllers
             return await query.ToListAsync();
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public virtual async Task<T?> Get(int? id)
         {
             if (id.HasValue)
@@ -47,22 +47,22 @@ namespace ExpertsBlog.Api.Controllers
             return null;
         }
 
-        [HttpPut]
-        public virtual async Task<T?> Put(int id, [FromBody]T t)
+        [HttpPut("{id}")]
+        public virtual async Task<T?> Put(int? id, [FromBody]T t)
         {
-            if (t is not null && id == t.Id)
+            if (t is not null && id is not null && id == t.Id)
             {
-                return await Repository.UpdateAsync(id, t);
+                return await Repository.UpdateAsync(id.Value, t);
             }
             return null;
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public virtual async Task<T?> Delete(int? id)
         {
             if (id.HasValue)
             {
-                T t = await Repository.GetAsync(id.Value);
+                T? t = await Repository.GetAsync(id.Value);
                 if (t is not null)
                 {
                     t.IsDeleted = true;
@@ -72,12 +72,12 @@ namespace ExpertsBlog.Api.Controllers
             return null;
         }
 
-        [HttpDelete]
+        [HttpPut("{id}")]
         public virtual async Task<T?> Undelete(int? id)
         {
             if (id.HasValue)
             {
-                T t = await Repository.GetAsync(id.Value);
+                T? t = await Repository.GetAsync(id.Value);
                 if (t is not null)
                 {
                     t.IsDeleted = false;

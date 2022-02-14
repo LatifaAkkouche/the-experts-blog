@@ -38,7 +38,7 @@ namespace ExpertsBlog.Api.Controllers
         }
 
         [HttpPost]
-        public virtual async Task<T?> Post([FromBody]T t)
+        public virtual async Task<T?> Post([FromBody] T t)
         {
             if (t is not null)
             {
@@ -48,7 +48,7 @@ namespace ExpertsBlog.Api.Controllers
         }
 
         [HttpPut("{id}")]
-        public virtual async Task<T?> Put(int? id, [FromBody]T t)
+        public virtual async Task<T?> Put(int? id, [FromBody] T t)
         {
             if (t is not null && id is not null && id == t.Id)
             {

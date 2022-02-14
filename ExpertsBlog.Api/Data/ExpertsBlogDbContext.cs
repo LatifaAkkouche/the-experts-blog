@@ -5,7 +5,9 @@ namespace ExpertsBlog.Api.Data
 {
     public class ExpertsBlogDbContext : DbContext
     {
-        DbSet<BlogPost> BlogPosts { get; set; }
+        public DbSet<BlogPost> BlogPosts { get; set; }
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
         public ExpertsBlogDbContext(DbContextOptions options) 
             : base(options)

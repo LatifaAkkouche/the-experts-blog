@@ -16,7 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ExpertsBlog.Data\ExpertsBlog.Data.csproj" />
     <ProjectReference Include="..\ExpertsBlog.Entities\ExpertsBlog.Entities.csproj" />
   </ItemGroup>
 

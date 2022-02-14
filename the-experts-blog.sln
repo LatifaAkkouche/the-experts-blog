@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpertsBlog.Api", "ExpertsB
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExpertsBlog.Entities", "ExpertsBlog.Entities\ExpertsBlog.Entities.csproj", "{3B4318A4-457F-4D36-AC1A-D076A12C14BF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertsBlog.Mobile.Android", "ExpertsBlog.Mobile\ExpertsBlog.Mobile.Android\ExpertsBlog.Mobile.Android.csproj", "{7306C0F3-25B9-46F1-88F9-7418B44B3B19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertsBlog.Mobile.Android", "ExpertsBlog.Mobile.Android\ExpertsBlog.Mobile.Android.csproj", "{7306C0F3-25B9-46F1-88F9-7418B44B3B19}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertsBlog.Mobile.iOS", "ExpertsBlog.Mobile\ExpertsBlog.Mobile.iOS\ExpertsBlog.Mobile.iOS.csproj", "{B931327E-1969-4569-ACD0-ECE3BD62CEE0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertsBlog.Mobile.iOS", "ExpertsBlog.Mobile.iOS\ExpertsBlog.Mobile.iOS.csproj", "{B931327E-1969-4569-ACD0-ECE3BD62CEE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertsBlog.Mobile", "ExpertsBlog.Mobile\ExpertsBlog.Mobile\ExpertsBlog.Mobile.csproj", "{5839C8AA-8C8C-4FC5-9985-DF28410D323A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExpertsBlog.Mobile", "ExpertsBlog.Mobile\ExpertsBlog.Mobile.csproj", "{5839C8AA-8C8C-4FC5-9985-DF28410D323A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

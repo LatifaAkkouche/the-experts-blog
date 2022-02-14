@@ -10,7 +10,7 @@ namespace ExpertsBlog.Mobile
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new HomePage();
         }
 
         protected override void OnStart()

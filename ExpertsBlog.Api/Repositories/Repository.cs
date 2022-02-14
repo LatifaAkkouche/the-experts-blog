@@ -1,12 +1,9 @@
-﻿using ExpertsBlog.Data;
+﻿using ExpertsBlog.Api.Data;
 using ExpertsBlog.Entities;
-using System;
-using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
 
 namespace ExpertsBlog.Api.Controllers
 {

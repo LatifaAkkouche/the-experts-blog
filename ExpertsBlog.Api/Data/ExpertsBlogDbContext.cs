@@ -1,7 +1,7 @@
 ﻿using ExpertsBlog.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace ExpertsBlog.Data
+namespace ExpertsBlog.Api.Data
 {
     public class ExpertsBlogDbContext : DbContext
     {

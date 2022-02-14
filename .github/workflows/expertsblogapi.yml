@@ -1,18 +1,18 @@
-name: Build and deploy .NET Core app to Linux WebApp expertsblogapi
+name: Build and deploy .NET Core app to Windows WebApp ExpertsBlogApi
 on:
   push:
     branches:
     - main
 env:
-  AZURE_WEBAPP_NAME: expertsblogapi
+  AZURE_WEBAPP_NAME: ExpertsBlogApi
   AZURE_WEBAPP_PACKAGE_PATH: ExpertsBlog.Api/publish
-  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.expertsblogapi_0c2e }}
+  AZURE_WEBAPP_PUBLISH_PROFILE: ${{ secrets.ExpertsBlogApi_952e }}
   CONFIGURATION: Release
   DOTNET_CORE_VERSION: 6.0.x
   WORKING_DIRECTORY: ExpertsBlog.Api
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
     - name: Setup .NET Core
